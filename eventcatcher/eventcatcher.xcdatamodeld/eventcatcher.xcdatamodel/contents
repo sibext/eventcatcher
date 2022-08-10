@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="rawData" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="hub" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Hub" inverseName="events" inverseEntity="Hub"/>
+    </entity>
+    <entity name="Hub" representedClassName="Hub" syncable="YES" codeGenerationType="class">
+        <attribute name="serial" optional="YES" attributeType="String"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Event" inverseName="hub" inverseEntity="Event"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="serial"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Event" positionX="-210.4428100585938" positionY="216.7333374023438" width="128" height="74"/>
+        <element name="Hub" positionX="273.3082275390625" positionY="-44.27337646484375" width="91.197509765625" height="59"/>
+    </elements>
+</model>
