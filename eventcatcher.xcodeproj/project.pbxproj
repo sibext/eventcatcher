@@ -30,6 +30,9 @@
 		E8285D9928A291B000A9A65D /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8285D9728A291B000A9A65D /* EventsTableViewCell.xib */; };
 		E8285D9B28A299DC00A9A65D /* BaseUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8285D9A28A299DC00A9A65D /* BaseUINavigationController.swift */; };
 		E85F0D1B28A3568B00CF9FEC /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F0D1A28A3568B00CF9FEC /* Storage.swift */; };
+		E85F0D1E28A3713800CF9FEC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E85F0D1D28A3713800CF9FEC /* RxCocoa */; };
+		E85F0D2028A3713800CF9FEC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E85F0D1F28A3713800CF9FEC /* RxSwift */; };
+		E85F0D2328A371A000CF9FEC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E85F0D2228A371A000CF9FEC /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85F0D2028A3713800CF9FEC /* RxSwift in Frameworks */,
+				E85F0D1E28A3713800CF9FEC /* RxCocoa in Frameworks */,
+				E85F0D2328A371A000CF9FEC /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +228,11 @@
 			dependencies = (
 			);
 			name = eventcatcher;
+			packageProductDependencies = (
+				E85F0D1D28A3713800CF9FEC /* RxCocoa */,
+				E85F0D1F28A3713800CF9FEC /* RxSwift */,
+				E85F0D2228A371A000CF9FEC /* Swinject */,
+			);
 			productName = eventcatcher;
 			productReference = E8285D5328A255AE00A9A65D /* eventcatcher.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +261,10 @@
 				Base,
 			);
 			mainGroup = E8285D4A28A255AE00A9A65D;
+			packageReferences = (
+				E85F0D1C28A3713800CF9FEC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E85F0D2128A371A000CF9FEC /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = E8285D5428A255AE00A9A65D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -506,6 +521,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E85F0D1C28A3713800CF9FEC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		E85F0D2128A371A000CF9FEC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E85F0D1D28A3713800CF9FEC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E85F0D1C28A3713800CF9FEC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E85F0D1F28A3713800CF9FEC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E85F0D1C28A3713800CF9FEC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		E85F0D2228A371A000CF9FEC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E85F0D2128A371A000CF9FEC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E8285D5F28A255AE00A9A65D /* eventcatcher.xcdatamodeld */ = {
