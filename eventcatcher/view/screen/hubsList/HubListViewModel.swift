@@ -11,7 +11,7 @@ import Foundation
 // Show data in table view
 class HubListViewModel {
     let list = [
-        // SAMPLE. TODO remote it and show real data
+        // SAMPLE. TODO remove it and show real data
         HubModel(serial: "AU123", hasEnglishFirmware: true),
         HubModel(serial: "RU234", hasEnglishFirmware: false),
         HubModel(serial: "FR345", hasEnglishFirmware: false),
