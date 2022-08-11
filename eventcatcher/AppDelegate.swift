@@ -36,7 +36,6 @@ private struct DataMock {
     static func setupHubs() {
         Task {
             let storage = Storage.getInstance()
-            try await Task.sleep(nanoseconds: 1_000_000_000)
             let hub123AU = Hub.init(context: storage.mainContext)
             hub123AU.serial = "AU123"
 
@@ -64,7 +63,6 @@ private struct DataMock {
 
     static func setupEvents() {
         Task {
-            try await Task.sleep(nanoseconds: 2_000_000_000)
             let storage = Storage.getInstance()
             let request = Hub.fetchRequest()
             while(true) {

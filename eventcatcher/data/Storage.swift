@@ -8,18 +8,21 @@
 import Foundation
 import CoreData
 
-class Storage {
+final class Storage {
 
     private static var instance: Storage?
+    private static let nslock = NSLock()
 
     let mainContext: NSManagedObjectContext
     let eventsContext: NSManagedObjectContext
     private let persistentContainer: NSPersistentContainer
 
     static func getInstance() -> Storage {
+        nslock.lock()
         if instance == nil {
             instance = Storage()
         }
+        nslock.unlock()
         return instance!
     }
 
