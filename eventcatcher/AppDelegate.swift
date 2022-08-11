@@ -8,7 +8,7 @@
 import UIKit
 
 
-// TASK 1: Select only english language firmware.
+// TASK 1: Select only hubs with english firmware (AU and US) and show them in table view. Look at HubListViewModel.swift
 // TASK 2: Show events list from CoreData in EventsListViewController.swift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,10 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// You can not change this!
-private class DataMock {
+private struct DataMock {
 
     // Possible firmware languages: AU, US, FR, RU
+    // You can not change this method!
     static func setupHubs() {
         Task {
             let storage = Storage.getInstance()

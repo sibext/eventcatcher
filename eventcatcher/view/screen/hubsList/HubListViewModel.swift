@@ -7,8 +7,8 @@
 
 import Foundation
 
-// TASK 1: Select only english language firmware.
-// SHOW data in table view
+// TASK 1: Select only hubs with english firmware (AU and US)
+// Show data in table view
 class HubListViewModel {
     let list = [
         // SAMPLE. TODO remote it and show real data
@@ -19,11 +19,9 @@ class HubListViewModel {
     ]
 
     func loadHubs() {
-        Task {
-            let storage = Storage.getInstance()
-            let request = Hub.fetchRequest()
-            let hubs = try storage.mainContext.fetch(request)
-            print(hubs)
-        }
+//        let storage = Storage.getInstance()
+//        let request = Hub.fetchRequest()
+//        let hubs = try storage.mainContext.fetch(request)
+//        print(hubs)
     }
 }
