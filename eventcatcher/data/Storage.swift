@@ -18,11 +18,9 @@ final class Storage {
     private let persistentContainer: NSPersistentContainer
 
     static func getInstance() -> Storage {
-        nslock.lock()
         if instance == nil {
             instance = Storage()
         }
-        nslock.unlock()
         return instance!
     }
 

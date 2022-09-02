@@ -34,7 +34,6 @@ private struct DataMock {
     // Possible firmware languages: AU, US, FR, RU
     // You can not change this method!
     static func setupHubs() {
-        Task {
             let storage = Storage.getInstance()
             let hub123AU = Hub.init(context: storage.mainContext)
             hub123AU.serial = "AU123"
@@ -58,7 +57,6 @@ private struct DataMock {
             hub789FR.serial = "FR789"
 
             storage.saveContext(context: storage.mainContext)
-        }
     }
 
     static func setupEvents() {

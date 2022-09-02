@@ -21,7 +21,9 @@ class HubListViewModel {
     func loadHubs() {
 //        let storage = Storage.getInstance()
 //        let request = Hub.fetchRequest()
-//        let hubs = try storage.mainContext.fetch(request)
+//        guard let hubs = try? storage.mainContext.fetch(request) else {
+//            return
+//        }
 //        print(hubs)
     }
 }
